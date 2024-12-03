@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+:root{
+    --main_color:#f9d0de;
+    --dark_color:#733d26;
+    --mid_color_2:#98cd84;
+    --mid_color_1:#f790b2;
+    --light_color_1:#f9d0de;
+    --light_color_2:#cee0ba;
+    --letters:#ffe2c5;
+    --default-margin:192px;
+
+}
+
+body{
+    --border-color: #fff;
+    color:#222;
+    background-image:   
+            linear-gradient(
+                200deg, #f790b2, #AB65F0
+            );
+    font-family: Poppins;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+.login__page{
+    background-color: var(--main_color);
+    width: 270px;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    border-radius: 30px;
+    padding: 50px 30px;
+    box-shadow: 0 50px 150px #5553;
+    position: relative;
+}
+.login__page .login__title{
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.login__page .login__desc{
+    margin-bottom: 20px;
+}
+.login__page .login__forms{
+    background-color: var(--border-color);
+    border-radius: 10px;
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login__page .login__forms input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 20px;
+    font-family: Poppins;
+    outline: none;
+}
+.login__page .login__forms span{
+    color: #777;
+    display: flex;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.login__page .login__forms span ion-icon:nth-child(2){
+    display: none;
+}
+.login__page .login__recovery-password{
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: small;
+}
+.login__page .signIn button{
+    background-color: #FA6A69;
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+    border: none;
+    font-family: Poppins;
+    box-shadow: 0 10px 20px #FA6A6999;
+    margin-bottom: 40px;
+    transition: 0.5s;
+    color: #fff;
+}
+.login__page .signIn button:active{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.login__page .register{
+    font-size: small;
+}
+
+.register a{
+    cursor: pointer;
+    color: var(--mid_color_1);
+}
+.login__page .login__recovery-password a{
+    color: #1364cf;
+}
+
+.back-to-login a{
+    cursor: pointer;
+    color: var(--mid_color_1);
+}
+

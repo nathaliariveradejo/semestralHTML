@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Magnolia Events</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- Calendar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.css">
+
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="img/icon/logo.png">
+</head>
+<body>
+
+
+    <header>
+        <div class="logo">
+            <img src="img/icon/logo.png" alt="">
+            <a href="#"><span>Magnolia</span><span>Eventos</span></a>
+        </div>
+
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__items"><a href="#">INICIO</a></li>
+                <li class="navbar__items"><a href="reservas/reserva.html">RESERVAS</a></li>
+                <li class="navbar__items"><a href="#contacto">CONTACTO</a></li>
+                <li class="navbar__items"><a href="registros/login.html">LOG IN</a></li>
+            </ul>
+        </nav>     
+    </header>
+
+
+
+    <main>
+
+        <div class="main__landing__page">
+            <div class="landing__page__text">
+                <span>Haz especial cada momento con tus seres queridos</span>
+                <h2>Planea tu evento con <span>Magnolia</span></h2>
+            </div>
+            <div class="landing__page__reservar">
+                   <button><a href="reservas/reserva.html">Reservar</a></button>
+                
+            </div>
+        </div>
+        <div class="main__eventos">
+            <div class="eventos__container">
+                <div class="eventos__slider">
+            
+                    <div class="eventos__image eventos__image1">
+                        <div class="evento__description">
+                            <div class="evento__name">Bodas</div>
+                            <div class="evento__description__text">"Haz realidad la boda de tus sueños con nuestra plataforma. Encuentra los mejores lugares y servicios para crear un día inolvidable."</div>
+                            <button>Ver más</button>
+                        </div>
+                    </div>
+                    
+                    <div class="eventos__image eventos__image2">
+                        <div class="evento__description">
+                            <div class="evento__name">Nuestros Eventos</div>
+                            <div class="evento__description__text">Desliza y conoce todos los servicios que ofrecemos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="eventos__image eventos__image3">
+                        <div class="evento__description">
+                            <div class="evento__name">Festividades</div>
+                            <div class="evento__description__text">"Reserva fácilmente tus eventos favoritos para festividades como Navidad, Año Nuevo y más. Personaliza tu experiencia y vive momentos inolvidables."</div>
+                            <button><a href="#locaciones">Ver más</a></button>
+                        </div>
+                    </div>
+                    
+                    <div class="eventos__image eventos__image4">
+                        <div class="evento__description">
+                            <div class="evento__name">Reuniones ejecutivas</div>
+                            <div class="evento__description__text">"Organiza reuniones ejecutivas de alto nivel con facilidad. Encuentra espacios ideales, personaliza servicios y garantiza el éxito de tus encuentros."</div>
+                            <button>Ver más</button>
+                        </div>
+                    </div>
+                    
+                    <div class="eventos__image eventos__image5">
+                        <div class="evento__description">
+                            <div class="evento__name">Graduaciones</div>
+                            <div class="evento__description__text">"Celebra graduaciones inolvidables con los mejores espacios y servicios. Personaliza cada detalle para un evento único y lleno de alegría."</div>
+                            <button>Ver más</button>
+                        </div>
+                    </div>
+                    
+            
+                </div>
+                
+                <div class="button">
+                    <button class="prev__slide"><img src="img/arrow__left__slide.png" alt=""><</button>
+                    <button class="next__slide"><img src="img/arrow__right__slide.png" alt="">></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main__reserva">
+            <div class="texto__reserva">
+                <h1>Reserva ahora con unos pocos clics</h1>
+                <button><a href="reservas/reserva.html">Haz clic aqui</a></button>
+            </div>
+            <div class="boton__reserva"></div>
+        </div>
+       
+        <div class="main__servicios">
+            <div class="servicios__text">
+                <h2>Servicios</h2>
+                <p>
+                    "Brindamos todo lo que necesitas para un evento perfecto: fotografía profesional, música en vivo, catering de primera, decoración personalizada y animadores que garantizan diversión. ¡Haz de tu celebración una experiencia inolvidable!"</p>
+            </div>
+            <div class="servicio__grid">
+                <div class="servicio servicio--fotografia"></div>
+                <div class="servicio servicio--decoracion"></div>
+                <div class="servicio servicio--catering"></div>
+                <div class="servicio servicio--sonido"></div>
+                <div class="servicio servicio--musica"></div>
+                <div class="servicio servicio--animacion"></div>
+                <div class="servicio servicio--payasos"></div>
+            </div>
+
+        </div>
+
+        <div class="main__locaciones" id="locaciones">
+            <!-- aire__libre locaciones__imagens -->
+            <div class="aire__libre">
+                <div class="locaciones__imagen activo">
+                    <img src="img/locaciones/aire__libre/playa.jpg">
+                    <div class="locaciones__texto">
+                        <h2>Playa</h2>
+                        <p>
+                            "Disfruta de eventos únicos junto al mar en nuestra hermosa locación en la playa. Con vistas espectaculares, brisa marina y un ambiente mágico, es el lugar perfecto para bodas, graduaciones, reuniones y celebraciones inolvidables."
+                        </p>
+                    </div>
+                </div>
+                <div class="locaciones__imagen">
+                    <img src="img/locaciones/aire__libre/bosque.jpg">
+                    <div class="locaciones__texto">
+                        <h2>Bosque</h2>
+                        <p>
+
+                            "Sumérgete en la tranquilidad del bosque para tu evento especial. Rodeado de naturaleza y con un ambiente encantador, es el lugar ideal para celebraciones mágicas y memorables."
+                        </p>
+                    </div>
+                </div>
+                <div class="locaciones__imagen">
+                    <img src="img/locaciones/aire__libre/lago.jpg">
+                    <div class="locaciones__texto">
+                        <h2>Lago</h2>
+                        <p>
+
+                            "Celebra momentos únicos junto a un hermoso lago. Disfruta de un entorno sereno y pintoresco, perfecto para crear recuerdos inolvidables en cualquier ocasión especial."
+                        </p>
+                    </div>
+                </div>
+                <div class="locaciones__imagen">
+                    <img src="img/locaciones/aire__libre/jardin.jpg">
+                    <div class="locaciones__texto">
+                        <h2>Jardin</h2>
+                        <p>
+                            "Vive la magia de tu evento en un encantador jardín. Rodeado de flores y naturaleza, es el escenario perfecto para celebraciones llenas de vida y elegancia."
+                        </p>
+                    </div>
+                </div>
+                <div class="locaciones__imagen">
+                    <img src="img/locaciones/aire__libre/piscina.jpg">
+                    <div class="locaciones__texto">
+                        <h2>Piscina</h2>
+                        <p>
+                            "Disfruta de una celebración refrescante junto a la piscina. Con un ambiente relajado y elegante, es el lugar ideal para eventos únicos y momentos inolvidables."
+                        </p>
+                    </div>
+                </div>
+                <div class="locaciones__imagen">
+                    <img src="img/locaciones/aire__libre/salon.jpg">
+                    <div class="locaciones__texto">
+                        <h2>Salon</h2>
+                        <p>
+                            Celebra tu evento bajo techo con vista panorámica a la naturaleza.
+                            Un ambiente elegante, ideal para bodas, cumpleaños, reuniones ejecutivas y más.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- button locaciones__flecha -->
+            <div class="locaciones__flecha">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <!-- locaciones__small__img -->
+            <div class="locaciones__small__img">
+                <div class="locaciones__imagen activo">
+                    <img src="img/locaciones/aire__libre/playa.jpg">
+                    <div class="locaciones__texto">
+                        Playa
+                    </div>
+                </div>
+                <div class="locaciones__imagen">
+                    <img src="img/locaciones/aire__libre/bosque.jpg">
+                    <div class="locaciones__texto">
+                        Bosque
+                    </div>
+                </div>
+                <div class="locaciones__imagen">
+                    <img src="img/locaciones/aire__libre/lago.jpg">
+                    <div class="locaciones__texto">
+                        Lago
+                    </div>
+                </div>
+                <div class="locaciones__imagen">
+                    <img src="img/locaciones/aire__libre/jardin.jpg">
+                    <div class="locaciones__texto">
+                        Jardin
+                    </div>
+                </div>
+                <div class="locaciones__imagen">
+                    <img src="img/locaciones/aire__libre/piscina.jpg">
+                    <div class="locaciones__texto">
+                        Piscina
+                    </div>
+                </div>
+                <div class="locaciones__imagen">
+                    <img src="img/locaciones/aire__libre/salon.jpg">
+                    <div class="locaciones__texto">
+                        Salon
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main__about-us">
+            <div class="about__us__container">
+                <div class="about__us-img"></div>
+                <div class="about__us-text">
+                    <h2>Sobre Nosotros</h2>
+                    <p>Magnolia Events es una compañía dedicada a la organización de eventos únicos y memorables, adaptados a las necesidades y deseos de cada cliente. Especializados en una amplia variedad de celebraciones, desde bodas y fiestas de cumpleaños hasta reuniones ejecutivas y eventos especiales, ofrecemos una selección de locaciones excepcionales, ya sea bajo techo, en ambientes rústicos o al aire libre.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__contact-us" id="contacto">
+            <div class="contact__us-container">
+                <div class="contact__us-form">
+                    <h2>Contáctanos</h2>
+                    <p>Déjanos un mensaje y nos pondremos en contacto contigo.</p>
+                    <form action="">
+                        <input type="text" placeholder="Tu nombre" required>
+                        <input type="email" placeholder="Tu correo" required>
+                        <textarea placeholder="Tu mensaje" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div class="contact__us-info">
+                    <h3>Información de Contacto</h3>
+                    <p>📍 Dirección: Magnolia Eventos, Río Hato, Provincia de Coclé, Panamá</p>
+                    <p>📞 Teléfono: 345-0056</p>
+                    <p>✉️ Correo: customerservice@magnoliaeventos.com</p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__redes">
+            <div class="footer_page-name">
+                <div class="logo">
+                    <img src="img/icon/logo.png" alt="">
+                    <a href="#"><span>Magnolia</span><span>Eventos</span></a>
+                </div>
+            </div>
+            <div class="footer__redes__iconos">
+                <a href="" class="footer__instagram"></a>
+                <a href="" class="footer__facebook"></a>
+                <a href="" class="footer__x"></a>
+            </div>
+        </div>
+
+        <div class="footer__empresa-info">
+            <h4>Contáctanos</h4>
+            <span>customerservice@magnoliaeventos.com</span>
+            <span>Dirección: Magnolia Eventos, Río Hato, Provincia de Coclé, Panamá</span>
+            <span>+507 345-0056</span>
+        </div>
+
+        <div class="footer__subscribe">
+            <h4>Suscríbete</h4>
+            <span>Ingresa tu email para recibir información sobre la empresa</span>
+            <input type="text" placeholder="Email">
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

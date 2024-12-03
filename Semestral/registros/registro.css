@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --main_color: #f9d0de;
+    --dark_color: #733d26;
+    --mid_color_1: #f790b2;
+    --mid_color_2: #98cd84;
+    --light_color_1: #f9d0de;
+    --light_color_2: #cee0ba;
+    --letters: #ffe2c5;
+    --form-width: 700px;
+}
+
+body {
+    --border-color: #fff;
+    color: #222;
+    background-image: linear-gradient(200deg, #f790b2, #ab65f0);
+    font-family: Poppins;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.register__page {
+    background-color: var(--main_color);
+    width: var(--form-width);
+    max-width: 90%;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    border-radius: 30px;
+    padding: 30px 40px;
+    box-shadow: 0 50px 150px #5553;
+    position: relative;
+}
+
+.register__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.register__desc {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.register__form-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.register__column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 300px;
+}
+
+.register__forms {
+    background-color: var(--border-color);
+    border-radius: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    align-items: flex-start;
+}
+
+.register__forms input,
+.register__forms textarea {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    font-family: Poppins;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+}
+
+.register__forms textarea {
+    height: 80px;
+    line-height: 1.5;
+}
+
+.register__submit button {
+    background-color: #fa6a69;
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+    border: none;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 20px #fa6a6999;
+    margin-top: 20px;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.register__submit button:hover {
+    background-color: #e65554;
+}
+
+.back-to-login {
+    font-size: 0.9rem;
+    margin-top: 20px;
+}

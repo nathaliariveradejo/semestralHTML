@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="login.css">
+	<link rel="stylesheet" href="registro.css">
+	<title>Iniciar Sesion</title>
+	<link rel="icon" type="image/x-icon" href="../img/icon/logo.png">
+</head>
+<body class="body__login">
+
+	<div class="login__page" id="login" style="display: initial;">
+		<div class="login__title">¡Hola!</div>
+		<div class="login__desc">
+			Bienvenido de Vuelta <br> 
+		</div>
+		<div class="login__forms">
+			<input type="text" id="correo" placeholder="Enter email">
+		</div>
+		<div class="login__forms">
+			<input type="password" id="password" placeholder="Password">
+				<span id="mostrar/ocultar" aria-label="Mostrar contraseña">
+					<ion-icon id="mostrar" name="eye-outline" style="display: inline;"></ion-icon>
+					<ion-icon id="ocultar" name="eye-off-outline" style="display: none;"></ion-icon>
+				</span>
+		</div>
+		<div class="login__recovery-password">
+			<a href="../index.html">Volver al Inicio</a>
+		</div>
+		<div class="signIn">
+			<button onclick="iniciarSesion()">Sign In</button>
+		</div>
+		<div class="register">
+			¿No eres miembro aún? <a onclick="irRegistro()" >Registrate ya</a>
+		</div>
+	</div>
+
+
+	<!-- esto es solo una version de demostracion de funcionalidad  -->
+	<div class="register__page" id="registro" style="display: none;">
+		<div class="register__title">¡Únete!</div>
+		<div class="register__desc">
+			Crea tu cuenta <br>
+		</div>
+		<div class="register__form-container">
+			<div class="register__column">
+				<div class="register__forms">
+					<input type="text" id="registro_nombre" placeholder="Nombre" required>
+				</div>
+				<div class="register__forms">
+					<input type="text" id="registro_apellido" placeholder="Apellido" required>
+				</div>
+				<div class="register__forms">
+					<input type="text" id="registro_correo" placeholder="Correo" required>
+				</div>
+			</div>
+			<div class="register__column">
+				<div class="register__forms">
+					<input type="text" id="registro_direccion" placeholder="Dirección" required>
+				</div>
+				<div class="register__forms">
+					<input type="tel" id="registro_telefono" placeholder="Número de Teléfono" required>
+				</div>
+				<div class="register__forms">
+					<input type="password" id="registro_contraseña" placeholder="Contraseña" required>
+
+				</div>
+			</div>
+		</div>
+		<div class="register__submit">
+			<button onclick="crearCuenta()">Registrar</button>
+		</div>
+		<div class="back-to-login">
+			¿Ya tienes una cuenta? <a onclick="irLogin()" >Inicia sesión</a>
+		</div>
+	</div>
+	<!-- aqui termina  -->
+
+	<script src="login.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

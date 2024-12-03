@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link rel="stylesheet" href="reservas.css">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+        <!-- Calendar -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.css">
+    
+        <!-- Icon -->
+        <link rel="icon" type="image/x-icon" href="../img/icon/logo.png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/icon/logo.png" alt="">
+            <a href="../index.html"><span>Magnolia</span><span>Eventos</span></a>
+        </div>
+
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__items"><a href="../index.html">INICIO</a></li>
+                <li class="navbar__items"><a href="#">RESERVAS</a></li>
+                <li class="navbar__items"><a href="../#contacto">CONTACTO</a></li>
+                <li class="navbar__items"><a href="../registros/login.html">LOG IN</a></li>
+            </ul>
+        </nav>     
+    </header>
+
+    <div id="reservas" class="main__reservas" id="reservas">
+        <div class="text__reservas">
+            <h2>Reservas</h2>
+
+            <div class="reserva__select-ambiente">
+                <button id="aire-libre-btn">Aire Libre</button>
+                <button id="bajo-techo-btn">Bajo Techo</button>
+            </div>
+            
+        </div>
+
+        <div class="barra__avance-reservas">
+            <div class="barra__avance-reservas__item">Reservar</div>
+            <div class="barra__avance-reservas__item">Servicios Adicionales</div>
+            <div class="barra__avance-reservas__item">Cotización</div>
+        </div>
+
+
+        <div class="formulario__reservas">
+
+            <div class="column__reservas">
+                <div class="formulario__locacion">
+                    <div class="locacion__select-container" id="aire-libre">
+                        <label for="locacion">Locación:</label>
+                        <select id="locaciones__select" class="locaciones__select" onchange="cambiarLocacion()">
+                            <option value="Playa">Playa</option>
+                            <option value="Lago">Lago</option>
+                            <option value="Bosque">Bosque</option>
+                            <option value="Jardín">Jardín</option>
+                            <option value="Piscina">Piscina</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h2 id="nombre-locacion">Playa📍</h2>
+                        <span>Aire e Baño Incluido</span>
+                    </div>
+                </div>
+            
+                <!-- Nueva sección para la cantidad de personas -->
+                <div class="formulario__cantidad-personas">
+                    <label for="cantidad-personas">Cantidad de personas:</label>
+                    <input type="number"   value="0"  max="101" id="cantidad-personas" name="cantidad-personas" min="1" max="100" required>
+                    <span>Máximo 100 personas</span>
+                </div>
+            
+                <!-- Nueva sección para el tipo de evento -->
+                <div class="formulario__tipo-evento">
+                    <label for="tipo-evento">Tipo de evento:</label>
+                    <select id="tipo-evento" name="tipo-evento" required>
+                        <option value="matrimonio">Matrimonio</option>
+                        <option value="cumpleaños">Cumpleaños</option>
+                        <option value="reuniones-ejecutivas">Reuniones Ejecutivas</option>
+                        <option value="graduaciones">Graduaciones</option>
+                        <option value="festividades">Festividades</option>
+                        <option value="quinceaños">Quinceaños</option>
+                    </select>
+                </div>
+            
+
+            </div>
+
+            <div class="column__reservas">
+
+                
+                <div class="formulario__fecha">
+                    <div>
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" onchange="cambiarFecha()">
+                    </div>
+                    <div>
+                        <h2 id="fecha-mostrada">10 de Diciembre 2024</h2>
+                    </div>
+                </div>
+        
+            <div class="formulario__hora">
+                <div>
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" onchange="cambiarHora()">
+                </div>
+                <span id="hora-mostrada">00:00</span>
+            </div>
+        </div>
+        
+        <button onclick="cambiarAServiciosAdicionales()" class="reserva__next__button">Siguiente</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Página de Servicios Adicionales -->
+<div id="servicios-adicionales" class="main__reservas servicios-adicionales">
+        <div class="text__reservas servicios">
+            <h2>Servicios Adicionales</h2>
+            <p>Haz tu reserva y no te quedes sin la fiesta de tus sueños</p>
+        </div>
+        <div class="barra__avance-reservas">
+            <div class="barra__avance-reservas__item">Reservar</div>
+            <div class="barra__avance-reservas__item">Servicios Adicionales</div>
+            <div class="barra__avance-reservas__item">Cotización</div>
+        </div>
+
+        
+        <div class="lista-servicios">
+
+            <div class="lista-servicio-checkbox">
+                <h2>Servicio</h2>
+            
+                <label><input type="checkbox" value="Fotografía" onchange="actualizarCotizacionConServicioAd(this)"> Fotografía </label>
+                <label><input type="checkbox" value="Decoración_Básica" onchange="actualizarCotizacionConServicioAd(this)"> Decoración (Básica) </label>
+                <label><input type="checkbox" value="Decoración_Premium" onchange="actualizarCotizacionConServicioAd(this)"> Decoración (Premium)</label>
+                <label><input type="checkbox" value="Catering" onchange="actualizarCotizacionConServicioAd(this)"> Catering </label>
+                <label><input type="checkbox" value="Equipo_de_Sonido_con_DJ" onchange="actualizarCotizacionConServicioAd(this)"> Equipo de sonido </label>
+                <label><input type="checkbox" value="Mariachi" onchange="actualizarCotizacionConServicioAd(this)"> Mariachi </label>
+                <label><input type="checkbox" value="Murga" onchange="actualizarCotizacionConServicioAd(this)"> Murga </label>
+                <label><input type="checkbox" value="Música_en_Vivo" onchange="actualizarCotizacionConServicioAd(this)"> Musica en vivo </label>
+                <label><input type="checkbox" value="Animadores" onchange="actualizarCotizacionConServicioAd(this)"> Animadores </label>
+                <label><input type="checkbox" value="Payasos" onchange="actualizarCotizacionConServicioAd(this)"> Payasos </label>
+    
+                <button onclick="mostrarPagina('reservas')">Anterior</button>
+                <button onclick="mostrarPagina('cotizacion')">Siguiente</button>
+            </div>
+
+
+
+            <div class="lista-precios">
+
+            <h2>Precios</h2>
+                <ul>
+                    <li>200 por evento</li>
+                    <li>$500</li>
+                    <li>$1000</li>
+                    <li>($25 por persona)</li>
+                    <li>$300</li>
+                    <li>$120</li>
+                    <li>$250</li>
+                    <li>$400</li>
+                    <li>$250</li>
+                    <li>$50</li>
+                </ul>
+            <div>
+
+
+            </div>
+    </div>
+ 
+
+</div>
+
+</div>
+
+
+
+
+<!-- Página de Cotización -->
+<div id="cotizacion" class="main__reservas cotizacion">
+
+    <div class="text__reservas servicios">
+        <h2>Cotizacion</h2>
+        <p>A solo un paso más de tu fiesta soñada</p>
+    </div>
+    <div class="barra__avance-reservas">
+        <div class="barra__avance-reservas__item">Reservar</div>
+        <div class="barra__avance-reservas__item">Servicios Adicionales</div>
+        <div class="barra__avance-reservas__item">Cotización</div>
+    </div>
+
+
+
+
+
+        <table id="tabla-cotizacion">
+            <thead>
+                <tr>
+                    <th>Servicio</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    
+        <!-- Aquí agregamos la cantidad de personas y tipo de evento -->
+        <div class="informacion-reserva">
+            <p><strong>Cantidad de personas:</strong> <span id="cantidad-personas-cotizacion">0</span></p>
+            <p><strong>Tipo de evento:</strong> <span id="tipo-evento-cotizacion">No definido</span></p>
+        </div>
+
+        <div class="totals">
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+            <p>ITBMS (7%): $<span id="itbms">0.00</span></p>
+            <p class="total-amount">Total: $<span id="total">0.00</span></p>
+        </div>
+    
+        <div class="buttons">
+            <button onclick="cambiarAServiciosAdicionales()">Anterior</button>
+            <button onclick="procesarPagoReservacion()">Pagar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Página de pago -->
+<div id="pagos" class="contenedor">
+    <form id="paymentForm">
+        <div class="fila">
+            <div class="columna">
+                <h3 class="columna__titulo">Pago</h3>
+                <div class="entrada">
+                    <span class="entrada__etiqueta">Método de pago:</span>
+                    <select id="metodo__pago" class="metodo__pago" onchange="cambiarLocacion()">
+                        <option value="Crédito" class="metodo__pago">Crédito</option>
+                        <option value="Débito" class="metodo__pago">Débito</option>
+                    </select>
+                </div>
+                <div class="entrada">
+                    <span class="entrada__etiqueta">Nombre en la Tarjeta:</span>
+                    <input class="entrada__campo" type="text" placeholder="Tu Nombre" required>
+                </div>
+                <div class="entrada">
+                    <span class="entrada__etiqueta">Número de Tarjeta:</span>
+                    <input class="entrada__campo" type="number" placeholder="1111 2222 3333 4444" required>
+                </div>
+                <div class="entrada">
+                    <span class="entrada__etiqueta">Mes de Expiración:</span>
+                    <input class="entrada__campo" type="text" placeholder="Mes" required>
+                </div>
+
+                <div class="fila fila--doble">
+                    <div class="entrada">
+                        <span class="entrada__etiqueta">Año de Expiración:</span>
+                        <input class="entrada__campo" type="number" placeholder="2025" required>
+                    </div>
+                    <div class="entrada">
+                        <span class="entrada__etiqueta">CVV:</span>
+                        <input class="entrada__campo" type="number" placeholder="123" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="boton" type="button" onclick="cancelarPago()">Cancelar</button>
+        <button class="boton" type="submit" onclick="pagar()">Pagar</button>
+        <a href="terminos-y-condiciones.html" target="_blank">Términos y condiciones</a>
+    </form>
+</div>
+ 
+<!-- Modal de éxito -->
+<div id="modalExito" class="modal" style="display: none;">
+    <div class="modal-contenido">
+        <h2>¡Pago Exitoso!</h2>
+        <p>Tu pago ha sido procesado con éxito.</p>
+        <button class="boton" onclick="redireccionarAReservas()">Ver Reservas</button>
+        <button class="boton" onclick="volverAlInicio()">Volver al Inicio</button>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+<script src="reservas.js"></script>
+</body>
+</html>
